@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(257, 40%, 49%);
+    background-image: url("images/bg-desktop.svg")/*, url("images/bg-mobile.svg")*/;
+    background-repeat: no-repeat;
+
+    /*2 baris ini gunanya biar bg img tetap di tengah*/
+    background-position: center;
+    background-size: cover;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.logo{
+    margin: 4rem;
+}
+
+.full_intro{
+    display: flex;
+    flex-direction: row;
+    margin: 0 4rem;
+
+}
+
+.intro{
+    margin: 4rem;
+}
+
+h1{
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+p{
+    font-family: "Open Sans", sans-serif;
+    color: white;
+}
+
+.intro button{
+    font-family: "Open Sans", sans-serif;
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    margin: 2rem 0;
+    color: hsl(257, 40%, 49%);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.intro button:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: white;
+
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    gap: 2rem;
+    margin: 0 2rem;
+    font-size: 24px;
+}
+
+.social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: transparent;
+    color: white;
+    border-color: white;
+}
+
+.social button:hover{
+    color: hsl(300, 69%, 71%);
+    border-color: hsl(300, 69%, 71%);
+
+}
+
+.attribution{
+    margin: 4em;
+}
+
+@media (max-width: 768px){
+
+    body{
+        background-image: url("images/bg-mobile.svg");
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 100%;
+    }
+
+    .logo{
+        margin: 2rem;
+    }
+
+    .logo img{
+        width: 140px;
+    }
+
+    .full_intro{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 2rem;
+    }
+
+    .full_intro > img{
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+    }
+
+    .intro{
+        margin: 4rem 0 0;
+    }
+
+    h1{
+        font-size: 1.6rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+    }
+
+    p{
+        line-height: 1.8;
+        font-size: 1rem;
+    }
+
+    .intro button{
+        width: 220px;
+        display: block;
+        margin: 2rem auto;
+    }
+
+    .social{
+        justify-content: center;
+        margin: 3rem 0;
+        gap: 1rem;
+    }
+
+    .social button{
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .attribution{
+        margin: 1rem;
+    }
+}
